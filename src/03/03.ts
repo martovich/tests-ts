@@ -1,5 +1,5 @@
 import {StudentType} from "../02/02";
-import {GovBuildingsType, HouseType} from "../02/02_02";
+import {CityType, GovBuildingsType, HouseType} from "../02/02_02";
 
 export const addSkill = (st : StudentType, skill: string) => {
     st.technologies.push(
@@ -38,4 +38,10 @@ export function toFireStaff(govBuilding: GovBuildingsType, staffCountFire: numbe
 }
 export function toHireStaff(govBuilding: GovBuildingsType, staffCountHire: number) {
     govBuilding.staffCount += staffCountHire;
+}
+export function createMessage(city: CityType) {
+    //return "Hello " + city.title + " citizens! I want you be happy. All " + city.citizensNumber + " men.";
+    return `Hello ${city.title} citizens! I want you be happy. All ${city.citizensNumber} men.`;
+
+
 }

@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {splitIntoWords} from "./01-tests/01";
+import {dimychTransformator, people} from "./05/05_01";
 
 const sentence = "Hello my friends!";
 const result = splitIntoWords(sentence);
 console.log(result[0] === "hello");
 console.log(result[1] === "my");
 console.log(result[2] === "friends!");
+
+console.log(people.map(p => dimychTransformator(p)));
 
 ReactDOM.render(
   <React.StrictMode>

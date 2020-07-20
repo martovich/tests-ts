@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {splitIntoWords} from "./01-tests/01";
 import {dimychTransformator, people} from "./05/05_01";
+import {User} from "./06/06-callbacks";
 
 const sentence = "Hello my friends!";
 const result = splitIntoWords(sentence);
@@ -17,6 +18,7 @@ console.log(people.map(p => dimychTransformator(p)));
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <User />
   </React.StrictMode>,
   document.getElementById('root')
 );
